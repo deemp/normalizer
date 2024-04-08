@@ -172,20 +172,13 @@ jobs:
       - name: Run mdsh
         run: ./scripts/run-mdsh.sh
 
-      - name: Configure git for github-actions
-        run: |
-          git config user.name github-actions
-          git config user.email github-actions@github.com
-
-      - name: Commit changes produced by mdsh
-        run: |
-          git pull --rebase --autostash
-
-          git add site
-
-          git commit -m "Run mdsh" \
-            && git push \
-            || true
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v6.0.2
+        with:
+          commit-message: Run mdsh
+          add-paths: site
+          author: github-actions <github-actions@github.com>
+          committer: github-actions <github-actions@github.com>
 
       - name: Add docs
         run: |
