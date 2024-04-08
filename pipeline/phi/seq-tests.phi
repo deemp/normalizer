@@ -1,0 +1,138 @@
+{
+  ⟦
+    org ↦ ⟦
+      eolang ↦ ⟦
+        seq-single-dataization-float-less-than-test ↦ ⟦
+          counter ↦ Φ.org.eolang.memory(
+            α0 ↦ Φ.org.eolang.float(
+              α0 ↦ Φ.org.eolang.bytes(
+                Δ ⤍ 00-00-00-00-00-00-00-00
+              )
+            )
+          ),
+          φ ↦ Φ.org.eolang.seq(
+            α0 ↦ Φ.org.eolang.tuple(
+              α0 ↦ Φ.org.eolang.tuple(
+                α0 ↦ Φ.org.eolang.tuple.empty,
+                α1 ↦ ξ.counter.write(
+                  α0 ↦ ξ.counter.as-float.plus(
+                    α0 ↦ Φ.org.eolang.float(
+                      α0 ↦ Φ.org.eolang.bytes(
+                        Δ ⤍ 3F-F0-00-00-00-00-00-00
+                      )
+                    )
+                  )
+                )
+              ),
+              α1 ↦ ξ.counter.as-float
+            )
+          ).lt(
+            α0 ↦ Φ.org.eolang.float(
+              α0 ↦ Φ.org.eolang.bytes(
+                Δ ⤍ 40-00-00-00-00-00-00-00
+              )
+            )
+          )
+        ⟧,
+        seq-single-dataization-float-greater-than-test ↦ ⟦
+          counter ↦ Φ.org.eolang.memory(
+            α0 ↦ Φ.org.eolang.float(
+              α0 ↦ Φ.org.eolang.bytes(
+                Δ ⤍ 00-00-00-00-00-00-00-00
+              )
+            )
+          ),
+          φ ↦ Φ.org.eolang.seq(
+            α0 ↦ Φ.org.eolang.tuple(
+              α0 ↦ Φ.org.eolang.tuple(
+                α0 ↦ Φ.org.eolang.tuple.empty,
+                α1 ↦ ξ.counter.write(
+                  α0 ↦ ξ.counter.as-float.plus(
+                    α0 ↦ Φ.org.eolang.float(
+                      α0 ↦ Φ.org.eolang.bytes(
+                        Δ ⤍ 3F-F0-00-00-00-00-00-00
+                      )
+                    )
+                  )
+                )
+              ),
+              α1 ↦ ξ.counter.as-float
+            )
+          ).gt(
+            α0 ↦ Φ.org.eolang.float(
+              α0 ↦ Φ.org.eolang.bytes(
+                Δ ⤍ 3F-F1-99-99-99-99-99-9A
+              )
+            )
+          ).not
+        ⟧,
+        seq-single-dataization-int-less-than-test ↦ ⟦
+          counter ↦ Φ.org.eolang.memory(
+            α0 ↦ Φ.org.eolang.int(
+              α0 ↦ Φ.org.eolang.bytes(
+                Δ ⤍ 00-00-00-00-00-00-00-00
+              )
+            )
+          ),
+          φ ↦ Φ.org.eolang.seq(
+            α0 ↦ Φ.org.eolang.tuple(
+              α0 ↦ Φ.org.eolang.tuple(
+                α0 ↦ Φ.org.eolang.tuple.empty,
+                α1 ↦ ξ.counter.write(
+                  α0 ↦ ξ.counter.as-int.plus(
+                    α0 ↦ Φ.org.eolang.int(
+                      α0 ↦ Φ.org.eolang.bytes(
+                        Δ ⤍ 00-00-00-00-00-00-00-01
+                      )
+                    )
+                  )
+                )
+              ),
+              α1 ↦ ξ.counter.as-int
+            )
+          ).lt(
+            α0 ↦ Φ.org.eolang.int(
+              α0 ↦ Φ.org.eolang.bytes(
+                Δ ⤍ 00-00-00-00-00-00-00-02
+              )
+            )
+          )
+        ⟧,
+        seq-single-dataization-int-greater-than-test ↦ ⟦
+          counter ↦ Φ.org.eolang.memory(
+            α0 ↦ Φ.org.eolang.int(
+              α0 ↦ Φ.org.eolang.bytes(
+                Δ ⤍ 00-00-00-00-00-00-00-00
+              )
+            )
+          ),
+          φ ↦ Φ.org.eolang.seq(
+            α0 ↦ Φ.org.eolang.tuple(
+              α0 ↦ Φ.org.eolang.tuple(
+                α0 ↦ Φ.org.eolang.tuple.empty,
+                α1 ↦ ξ.counter.write(
+                  α0 ↦ ξ.counter.as-int.plus(
+                    α0 ↦ Φ.org.eolang.int(
+                      α0 ↦ Φ.org.eolang.bytes(
+                        Δ ⤍ 00-00-00-00-00-00-00-01
+                      )
+                    )
+                  )
+                )
+              ),
+              α1 ↦ ξ.counter.as-int
+            )
+          ).lte(
+            α0 ↦ Φ.org.eolang.int(
+              α0 ↦ Φ.org.eolang.bytes(
+                Δ ⤍ 00-00-00-00-00-00-00-01
+              )
+            )
+          )
+        ⟧,
+        λ ⤍ Package
+      ⟧,
+      λ ⤍ Package
+    ⟧
+  ⟧
+}

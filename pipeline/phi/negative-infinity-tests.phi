@@ -1,0 +1,311 @@
+{
+  ⟦
+    org ↦ ⟦
+      eolang ↦ ⟦
+        negative-infinity-is-equal-to-one-div-zero ↦ ⟦
+          φ ↦ Φ.org.eolang.negative-infinity.eq(
+            α0 ↦ Φ.org.eolang.float(
+              α0 ↦ Φ.org.eolang.bytes(
+                Δ ⤍ BF-F0-00-00-00-00-00-00
+              )
+            ).div(
+              α0 ↦ Φ.org.eolang.float(
+                α0 ↦ Φ.org.eolang.bytes(
+                  Δ ⤍ 00-00-00-00-00-00-00-00
+                )
+              )
+            )
+          )
+        ⟧,
+        negative-infinity-eq-negative-infinity ↦ ⟦
+          φ ↦ Φ.org.eolang.negative-infinity.eq(
+            α0 ↦ Φ.org.eolang.negative-infinity
+          )
+        ⟧,
+        negative-infinity-not-eq-positive-infinity ↦ ⟦
+          φ ↦ Φ.org.eolang.negative-infinity.eq(
+            α0 ↦ Φ.org.eolang.positive-infinity
+          ).not
+        ⟧,
+        negative-infinity-not-eq-nan ↦ ⟦
+          φ ↦ Φ.org.eolang.negative-infinity.eq(
+            α0 ↦ Φ.org.eolang.nan
+          ).not
+        ⟧,
+        negative-infinity-not-eq-int ↦ ⟦
+          φ ↦ Φ.org.eolang.negative-infinity.eq(
+            α0 ↦ Φ.org.eolang.int(
+              α0 ↦ Φ.org.eolang.bytes(
+                Δ ⤍ 00-00-00-00-00-00-00-2A
+              )
+            )
+          ).not
+        ⟧,
+        negative-infinity-not-eq-float ↦ ⟦
+          φ ↦ Φ.org.eolang.negative-infinity.eq(
+            α0 ↦ Φ.org.eolang.float(
+              α0 ↦ Φ.org.eolang.bytes(
+                Δ ⤍ 40-45-40-00-00-00-00-00
+              )
+            )
+          ).not
+        ⟧,
+        negative-infinity-lt-negative-infinity ↦ ⟦
+          neg-inf ↦ Φ.org.eolang.negative-infinity,
+          φ ↦ ξ.neg-inf.lt(
+            α0 ↦ ξ.neg-inf
+          ).eq(
+            α0 ↦ Φ.org.eolang.bool(
+              α0 ↦ Φ.org.eolang.bytes(
+                Δ ⤍ 00-
+              )
+            )
+          )
+        ⟧,
+        negative-infinity-lt-positive-infinity ↦ ⟦
+          φ ↦ Φ.org.eolang.negative-infinity.lt(
+            α0 ↦ Φ.org.eolang.positive-infinity
+          ).eq(
+            α0 ↦ Φ.org.eolang.bool(
+              α0 ↦ Φ.org.eolang.bytes(
+                Δ ⤍ 01-
+              )
+            )
+          )
+        ⟧,
+        negative-infinity-not-lt-nan ↦ ⟦
+          φ ↦ Φ.org.eolang.negative-infinity.lt(
+            α0 ↦ Φ.org.eolang.nan
+          ).eq(
+            α0 ↦ Φ.org.eolang.bool(
+              α0 ↦ Φ.org.eolang.bytes(
+                Δ ⤍ 00-
+              )
+            )
+          )
+        ⟧,
+        negative-infinity-lt-int ↦ ⟦
+          φ ↦ Φ.org.eolang.negative-infinity.lt(
+            α0 ↦ Φ.org.eolang.int(
+              α0 ↦ Φ.org.eolang.bytes(
+                Δ ⤍ 00-00-00-00-00-00-00-2A
+              )
+            )
+          )
+        ⟧,
+        negative-infinity-lt-float ↦ ⟦
+          φ ↦ Φ.org.eolang.negative-infinity.lt(
+            α0 ↦ Φ.org.eolang.float(
+              α0 ↦ Φ.org.eolang.bytes(
+                Δ ⤍ 40-45-40-00-00-00-00-00
+              )
+            )
+          )
+        ⟧,
+        negative-infinity-lte-negative-infinity ↦ ⟦
+          neg-inf ↦ Φ.org.eolang.negative-infinity,
+          φ ↦ ξ.neg-inf.lte(
+            α0 ↦ ξ.neg-inf
+          ).eq(
+            α0 ↦ Φ.org.eolang.bool(
+              α0 ↦ Φ.org.eolang.bytes(
+                Δ ⤍ 01-
+              )
+            )
+          )
+        ⟧,
+        negative-infinity-lte-positive-infinity ↦ ⟦
+          φ ↦ Φ.org.eolang.negative-infinity.lte(
+            α0 ↦ Φ.org.eolang.positive-infinity
+          ).eq(
+            α0 ↦ Φ.org.eolang.bool(
+              α0 ↦ Φ.org.eolang.bytes(
+                Δ ⤍ 01-
+              )
+            )
+          )
+        ⟧,
+        negative-infinity-not-lte-nan ↦ ⟦
+          φ ↦ Φ.org.eolang.negative-infinity.lte(
+            α0 ↦ Φ.org.eolang.nan
+          ).eq(
+            α0 ↦ Φ.org.eolang.bool(
+              α0 ↦ Φ.org.eolang.bytes(
+                Δ ⤍ 00-
+              )
+            )
+          )
+        ⟧,
+        negative-infinity-lte-int ↦ ⟦
+          φ ↦ Φ.org.eolang.negative-infinity.lte(
+            α0 ↦ Φ.org.eolang.int(
+              α0 ↦ Φ.org.eolang.bytes(
+                Δ ⤍ 00-00-00-00-00-00-00-2A
+              )
+            )
+          ).eq(
+            α0 ↦ Φ.org.eolang.bool(
+              α0 ↦ Φ.org.eolang.bytes(
+                Δ ⤍ 01-
+              )
+            )
+          )
+        ⟧,
+        negative-infinity-lte-float ↦ ⟦
+          φ ↦ Φ.org.eolang.negative-infinity.lte(
+            α0 ↦ Φ.org.eolang.float(
+              α0 ↦ Φ.org.eolang.bytes(
+                Δ ⤍ 40-45-40-00-00-00-00-00
+              )
+            )
+          ).eq(
+            α0 ↦ Φ.org.eolang.bool(
+              α0 ↦ Φ.org.eolang.bytes(
+                Δ ⤍ 01-
+              )
+            )
+          )
+        ⟧,
+        negative-infinity-gt-negative-infinity ↦ ⟦
+          neg-inf ↦ Φ.org.eolang.negative-infinity,
+          φ ↦ ξ.neg-inf.gt(
+            α0 ↦ ξ.neg-inf
+          ).not
+        ⟧,
+        negative-infinity-not-gt-positive-infinity ↦ ⟦
+          φ ↦ Φ.org.eolang.negative-infinity.gt(
+            α0 ↦ Φ.org.eolang.positive-infinity
+          ).eq(
+            α0 ↦ Φ.org.eolang.bool(
+              α0 ↦ Φ.org.eolang.bytes(
+                Δ ⤍ 00-
+              )
+            )
+          )
+        ⟧,
+        negative-infinity-not-gt-nan ↦ ⟦
+          φ ↦ Φ.org.eolang.negative-infinity.gt(
+            α0 ↦ Φ.org.eolang.nan
+          ).eq(
+            α0 ↦ Φ.org.eolang.bool(
+              α0 ↦ Φ.org.eolang.bytes(
+                Δ ⤍ 00-
+              )
+            )
+          )
+        ⟧,
+        negative-infinity-not-gt-int ↦ ⟦
+          φ ↦ Φ.org.eolang.negative-infinity.gt(
+            α0 ↦ Φ.org.eolang.int(
+              α0 ↦ Φ.org.eolang.bytes(
+                Δ ⤍ 00-00-00-00-00-00-00-2A
+              )
+            )
+          ).eq(
+            α0 ↦ Φ.org.eolang.bool(
+              α0 ↦ Φ.org.eolang.bytes(
+                Δ ⤍ 00-
+              )
+            )
+          )
+        ⟧,
+        negative-infinity-not-gt-float ↦ ⟦
+          φ ↦ Φ.org.eolang.negative-infinity.gt(
+            α0 ↦ Φ.org.eolang.float(
+              α0 ↦ Φ.org.eolang.bytes(
+                Δ ⤍ 40-45-40-00-00-00-00-00
+              )
+            )
+          ).eq(
+            α0 ↦ Φ.org.eolang.bool(
+              α0 ↦ Φ.org.eolang.bytes(
+                Δ ⤍ 00-
+              )
+            )
+          )
+        ⟧,
+        negative-infinity-gte-negative-infinity ↦ ⟦
+          neg-inf ↦ Φ.org.eolang.negative-infinity,
+          φ ↦ ξ.neg-inf.gte(
+            α0 ↦ ξ.neg-inf
+          ).eq(
+            α0 ↦ Φ.org.eolang.bool(
+              α0 ↦ Φ.org.eolang.bytes(
+                Δ ⤍ 01-
+              )
+            )
+          )
+        ⟧,
+        negative-infinity-not-gte-positive-infinity ↦ ⟦
+          φ ↦ Φ.org.eolang.negative-infinity.gte(
+            α0 ↦ Φ.org.eolang.positive-infinity
+          ).eq(
+            α0 ↦ Φ.org.eolang.bool(
+              α0 ↦ Φ.org.eolang.bytes(
+                Δ ⤍ 00-
+              )
+            )
+          )
+        ⟧,
+        negative-infinity-not-gte-nan ↦ ⟦
+          φ ↦ Φ.org.eolang.negative-infinity.gte(
+            α0 ↦ Φ.org.eolang.nan
+          ).eq(
+            α0 ↦ Φ.org.eolang.bool(
+              α0 ↦ Φ.org.eolang.bytes(
+                Δ ⤍ 00-
+              )
+            )
+          )
+        ⟧,
+        negative-infinity-not-gte-int ↦ ⟦
+          φ ↦ Φ.org.eolang.negative-infinity.gte(
+            α0 ↦ Φ.org.eolang.int(
+              α0 ↦ Φ.org.eolang.bytes(
+                Δ ⤍ 00-00-00-00-00-00-00-2A
+              )
+            )
+          ).eq(
+            α0 ↦ Φ.org.eolang.bool(
+              α0 ↦ Φ.org.eolang.bytes(
+                Δ ⤍ 00-
+              )
+            )
+          )
+        ⟧,
+        negative-infinity-not-gte-float ↦ ⟦
+          φ ↦ Φ.org.eolang.negative-infinity.gte(
+            α0 ↦ Φ.org.eolang.float(
+              α0 ↦ Φ.org.eolang.bytes(
+                Δ ⤍ 40-45-40-00-00-00-00-00
+              )
+            )
+          ).eq(
+            α0 ↦ Φ.org.eolang.bool(
+              α0 ↦ Φ.org.eolang.bytes(
+                Δ ⤍ 00-
+              )
+            )
+          )
+        ⟧,
+        negative-infinity-as-bytes-is-valid ↦ ⟦
+          φ ↦ Φ.org.eolang.negative-infinity.as-bytes.eq(
+            α0 ↦ Φ.org.eolang.float(
+              α0 ↦ Φ.org.eolang.bytes(
+                Δ ⤍ BF-F0-00-00-00-00-00-00
+              )
+            ).div(
+              α0 ↦ Φ.org.eolang.float(
+                α0 ↦ Φ.org.eolang.bytes(
+                  Δ ⤍ 00-00-00-00-00-00-00-00
+                )
+              )
+            ).as-bytes
+          )
+        ⟧,
+        λ ⤍ Package
+      ⟧,
+      λ ⤍ Package
+    ⟧
+  ⟧
+}

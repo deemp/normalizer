@@ -1,0 +1,28 @@
+{
+  ⟦
+    org ↦ ⟦
+      eolang ↦ ⟦
+        switch-case-with-error ↦ ⟦
+          φ ↦ Φ.org.eolang.try(
+            α0 ↦ Φ.org.eolang.switch(
+              α0 ↦ Φ.org.eolang.tuple.empty
+            ),
+            α1 ↦ ⟦
+              ex ↦ ∅,
+              φ ↦ ξ.ex.eq(
+                α0 ↦ Φ.org.eolang.string(
+                  α0 ↦ Φ.org.eolang.bytes(
+                    Δ ⤍ 73-77-69-74-63-68-20-63-61-73-65-73-20-61-72-65-20-65-6D-70-74-79
+                  )
+                )
+              )
+            ⟧,
+            α2 ↦ Φ.org.eolang.nop
+          )
+        ⟧,
+        λ ⤍ Package
+      ⟧,
+      λ ⤍ Package
+    ⟧
+  ⟧
+}

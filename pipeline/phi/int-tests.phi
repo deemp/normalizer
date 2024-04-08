@@ -1,0 +1,721 @@
+{
+  ⟦
+    org ↦ ⟦
+      eolang ↦ ⟦
+        less-true ↦ ⟦
+          φ ↦ Φ.org.eolang.int(
+            α0 ↦ Φ.org.eolang.bytes(
+              Δ ⤍ 00-00-00-00-00-00-00-0A
+            )
+          ).lt(
+            α0 ↦ Φ.org.eolang.int(
+              α0 ↦ Φ.org.eolang.bytes(
+                Δ ⤍ 00-00-00-00-00-00-00-32
+              )
+            )
+          ).eq(
+            α0 ↦ Φ.org.eolang.bool(
+              α0 ↦ Φ.org.eolang.bytes(
+                Δ ⤍ 01-
+              )
+            )
+          )
+        ⟧,
+        less-equal ↦ ⟦
+          φ ↦ Φ.org.eolang.int(
+            α0 ↦ Φ.org.eolang.bytes(
+              Δ ⤍ 00-00-00-00-00-00-00-0A
+            )
+          ).lt(
+            α0 ↦ Φ.org.eolang.int(
+              α0 ↦ Φ.org.eolang.bytes(
+                Δ ⤍ 00-00-00-00-00-00-00-0A
+              )
+            )
+          ).not.eq(
+            α0 ↦ Φ.org.eolang.bool(
+              α0 ↦ Φ.org.eolang.bytes(
+                Δ ⤍ 01-
+              )
+            )
+          )
+        ⟧,
+        less-false ↦ ⟦
+          φ ↦ Φ.org.eolang.int(
+            α0 ↦ Φ.org.eolang.bytes(
+              Δ ⤍ 00-00-00-00-00-00-00-0A
+            )
+          ).lt(
+            α0 ↦ Φ.org.eolang.int(
+              α0 ↦ Φ.org.eolang.bytes(
+                Δ ⤍ FF-FF-FF-FF-FF-FF-FF-FB
+              )
+            )
+          ).not.eq(
+            α0 ↦ Φ.org.eolang.bool(
+              α0 ↦ Φ.org.eolang.bytes(
+                Δ ⤍ 01-
+              )
+            )
+          )
+        ⟧,
+        greater-true ↦ ⟦
+          φ ↦ Φ.org.eolang.int(
+            α0 ↦ Φ.org.eolang.bytes(
+              Δ ⤍ FF-FF-FF-FF-FF-FF-FF-38
+            )
+          ).gt(
+            α0 ↦ Φ.org.eolang.int(
+              α0 ↦ Φ.org.eolang.bytes(
+                Δ ⤍ FF-FF-FF-FF-FF-FF-FC-18
+              )
+            )
+          ).eq(
+            α0 ↦ Φ.org.eolang.bool(
+              α0 ↦ Φ.org.eolang.bytes(
+                Δ ⤍ 01-
+              )
+            )
+          )
+        ⟧,
+        greater-false ↦ ⟦
+          φ ↦ Φ.org.eolang.int(
+            α0 ↦ Φ.org.eolang.bytes(
+              Δ ⤍ 00-00-00-00-00-00-00-00
+            )
+          ).gt(
+            α0 ↦ Φ.org.eolang.int(
+              α0 ↦ Φ.org.eolang.bytes(
+                Δ ⤍ 00-00-00-00-00-00-00-64
+              )
+            )
+          ).not.eq(
+            α0 ↦ Φ.org.eolang.bool(
+              α0 ↦ Φ.org.eolang.bytes(
+                Δ ⤍ 01-
+              )
+            )
+          )
+        ⟧,
+        greater-equal ↦ ⟦
+          φ ↦ Φ.org.eolang.int(
+            α0 ↦ Φ.org.eolang.bytes(
+              Δ ⤍ 00-00-00-00-00-00-00-00
+            )
+          ).gt(
+            α0 ↦ Φ.org.eolang.int(
+              α0 ↦ Φ.org.eolang.bytes(
+                Δ ⤍ 00-00-00-00-00-00-00-00
+              )
+            )
+          ).not.eq(
+            α0 ↦ Φ.org.eolang.bool(
+              α0 ↦ Φ.org.eolang.bytes(
+                Δ ⤍ 01-
+              )
+            )
+          )
+        ⟧,
+        leq-true ↦ ⟦
+          φ ↦ Φ.org.eolang.int(
+            α0 ↦ Φ.org.eolang.bytes(
+              Δ ⤍ FF-FF-FF-FF-FF-FF-FF-38
+            )
+          ).lte(
+            α0 ↦ Φ.org.eolang.int(
+              α0 ↦ Φ.org.eolang.bytes(
+                Δ ⤍ FF-FF-FF-FF-FF-FF-FF-9C
+              )
+            )
+          ).eq(
+            α0 ↦ Φ.org.eolang.bool(
+              α0 ↦ Φ.org.eolang.bytes(
+                Δ ⤍ 01-
+              )
+            )
+          )
+        ⟧,
+        leq-equal ↦ ⟦
+          φ ↦ Φ.org.eolang.int(
+            α0 ↦ Φ.org.eolang.bytes(
+              Δ ⤍ 00-00-00-00-00-00-00-32
+            )
+          ).lte(
+            α0 ↦ Φ.org.eolang.int(
+              α0 ↦ Φ.org.eolang.bytes(
+                Δ ⤍ 00-00-00-00-00-00-00-32
+              )
+            )
+          ).eq(
+            α0 ↦ Φ.org.eolang.bool(
+              α0 ↦ Φ.org.eolang.bytes(
+                Δ ⤍ 01-
+              )
+            )
+          )
+        ⟧,
+        leq-false ↦ ⟦
+          φ ↦ Φ.org.eolang.int(
+            α0 ↦ Φ.org.eolang.bytes(
+              Δ ⤍ 00-00-00-00-00-00-00-00
+            )
+          ).lte(
+            α0 ↦ Φ.org.eolang.int(
+              α0 ↦ Φ.org.eolang.bytes(
+                Δ ⤍ FF-FF-FF-FF-FF-FF-FF-F6
+              )
+            )
+          ).not.eq(
+            α0 ↦ Φ.org.eolang.bool(
+              α0 ↦ Φ.org.eolang.bytes(
+                Δ ⤍ 01-
+              )
+            )
+          )
+        ⟧,
+        gte-true ↦ ⟦
+          φ ↦ Φ.org.eolang.int(
+            α0 ↦ Φ.org.eolang.bytes(
+              Δ ⤍ FF-FF-FF-FF-FF-FF-FC-18
+            )
+          ).gte(
+            α0 ↦ Φ.org.eolang.int(
+              α0 ↦ Φ.org.eolang.bytes(
+                Δ ⤍ FF-FF-FF-FF-FF-FF-FB-B4
+              )
+            )
+          ).eq(
+            α0 ↦ Φ.org.eolang.bool(
+              α0 ↦ Φ.org.eolang.bytes(
+                Δ ⤍ 01-
+              )
+            )
+          )
+        ⟧,
+        gte-equal ↦ ⟦
+          φ ↦ Φ.org.eolang.int(
+            α0 ↦ Φ.org.eolang.bytes(
+              Δ ⤍ 00-00-00-00-00-00-00-71
+            )
+          ).gte(
+            α0 ↦ Φ.org.eolang.int(
+              α0 ↦ Φ.org.eolang.bytes(
+                Δ ⤍ 00-00-00-00-00-00-00-71
+              )
+            )
+          ).eq(
+            α0 ↦ Φ.org.eolang.bool(
+              α0 ↦ Φ.org.eolang.bytes(
+                Δ ⤍ 01-
+              )
+            )
+          )
+        ⟧,
+        gte-false ↦ ⟦
+          φ ↦ Φ.org.eolang.int(
+            α0 ↦ Φ.org.eolang.bytes(
+              Δ ⤍ 00-00-00-00-00-00-00-00
+            )
+          ).gte(
+            α0 ↦ Φ.org.eolang.int(
+              α0 ↦ Φ.org.eolang.bytes(
+                Δ ⤍ 00-00-00-00-00-00-00-0A
+              )
+            )
+          ).not.eq(
+            α0 ↦ Φ.org.eolang.bool(
+              α0 ↦ Φ.org.eolang.bytes(
+                Δ ⤍ 01-
+              )
+            )
+          )
+        ⟧,
+        int-equal-to-nan-and-infinites-is-false ↦ ⟦
+          φ ↦ Φ.org.eolang.int(
+            α0 ↦ Φ.org.eolang.bytes(
+              Δ ⤍ 00-00-00-00-00-00-00-00
+            )
+          ).eq(
+            α0 ↦ Φ.org.eolang.nan
+          ).eq(
+            α0 ↦ Φ.org.eolang.bool(
+              α0 ↦ Φ.org.eolang.bytes(
+                Δ ⤍ 00-
+              )
+            )
+          ).and(
+            α0 ↦ Φ.org.eolang.int(
+              α0 ↦ Φ.org.eolang.bytes(
+                Δ ⤍ 00-00-00-00-00-00-00-00
+              )
+            ).eq(
+              α0 ↦ Φ.org.eolang.positive-infinity
+            ).eq(
+              α0 ↦ Φ.org.eolang.bool(
+                α0 ↦ Φ.org.eolang.bytes(
+                  Δ ⤍ 00-
+                )
+              )
+            )
+          ).and(
+            α0 ↦ Φ.org.eolang.int(
+              α0 ↦ Φ.org.eolang.bytes(
+                Δ ⤍ 00-00-00-00-00-00-00-00
+              )
+            ).eq(
+              α0 ↦ Φ.org.eolang.negative-infinity
+            ).eq(
+              α0 ↦ Φ.org.eolang.bool(
+                α0 ↦ Φ.org.eolang.bytes(
+                  Δ ⤍ 00-
+                )
+              )
+            )
+          ).and(
+            α0 ↦ Φ.org.eolang.int(
+              α0 ↦ Φ.org.eolang.bytes(
+                Δ ⤍ 00-00-00-00-00-00-00-2A
+              )
+            ).eq(
+              α0 ↦ Φ.org.eolang.nan
+            ).eq(
+              α0 ↦ Φ.org.eolang.bool(
+                α0 ↦ Φ.org.eolang.bytes(
+                  Δ ⤍ 00-
+                )
+              )
+            )
+          ).and(
+            α0 ↦ Φ.org.eolang.int(
+              α0 ↦ Φ.org.eolang.bytes(
+                Δ ⤍ 00-00-00-00-00-00-00-2A
+              )
+            ).eq(
+              α0 ↦ Φ.org.eolang.positive-infinity
+            ).eq(
+              α0 ↦ Φ.org.eolang.bool(
+                α0 ↦ Φ.org.eolang.bytes(
+                  Δ ⤍ 00-
+                )
+              )
+            )
+          ).and(
+            α0 ↦ Φ.org.eolang.int(
+              α0 ↦ Φ.org.eolang.bytes(
+                Δ ⤍ 00-00-00-00-00-00-00-2A
+              )
+            ).eq(
+              α0 ↦ Φ.org.eolang.negative-infinity
+            ).eq(
+              α0 ↦ Φ.org.eolang.bool(
+                α0 ↦ Φ.org.eolang.bytes(
+                  Δ ⤍ 00-
+                )
+              )
+            )
+          ).eq(
+            α0 ↦ Φ.org.eolang.bool(
+              α0 ↦ Φ.org.eolang.bytes(
+                Δ ⤍ 01-
+              )
+            )
+          )
+        ⟧,
+        zero-eq-to-zero ↦ ⟦
+          φ ↦ Φ.org.eolang.int(
+            α0 ↦ Φ.org.eolang.bytes(
+              Δ ⤍ 00-00-00-00-00-00-00-00
+            )
+          ).eq(
+            α0 ↦ Φ.org.eolang.int(
+              α0 ↦ Φ.org.eolang.bytes(
+                Δ ⤍ 00-00-00-00-00-00-00-00
+              )
+            )
+          ).eq(
+            α0 ↦ Φ.org.eolang.bool(
+              α0 ↦ Φ.org.eolang.bytes(
+                Δ ⤍ 01-
+              )
+            )
+          )
+        ⟧,
+        int-zero-eq-to-float-zero ↦ ⟦
+          φ ↦ Φ.org.eolang.int(
+            α0 ↦ Φ.org.eolang.bytes(
+              Δ ⤍ 00-00-00-00-00-00-00-00
+            )
+          ).eq(
+            α0 ↦ Φ.org.eolang.float(
+              α0 ↦ Φ.org.eolang.bytes(
+                Δ ⤍ 00-00-00-00-00-00-00-00
+              )
+            )
+          ).eq(
+            α0 ↦ Φ.org.eolang.bool(
+              α0 ↦ Φ.org.eolang.bytes(
+                Δ ⤍ 01-
+              )
+            )
+          )
+        ⟧,
+        eq-true ↦ ⟦
+          φ ↦ Φ.org.eolang.int(
+            α0 ↦ Φ.org.eolang.bytes(
+              Δ ⤍ 00-00-00-00-00-00-00-7B
+            )
+          ).eq(
+            α0 ↦ Φ.org.eolang.int(
+              α0 ↦ Φ.org.eolang.bytes(
+                Δ ⤍ 00-00-00-00-00-00-00-7B
+              )
+            )
+          ).eq(
+            α0 ↦ Φ.org.eolang.bool(
+              α0 ↦ Φ.org.eolang.bytes(
+                Δ ⤍ 01-
+              )
+            )
+          )
+        ⟧,
+        eq-false ↦ ⟦
+          φ ↦ Φ.org.eolang.int(
+            α0 ↦ Φ.org.eolang.bytes(
+              Δ ⤍ 00-00-00-00-00-00-00-7B
+            )
+          ).eq(
+            α0 ↦ Φ.org.eolang.int(
+              α0 ↦ Φ.org.eolang.bytes(
+                Δ ⤍ 00-00-00-00-00-00-00-2A
+              )
+            )
+          ).not.eq(
+            α0 ↦ Φ.org.eolang.bool(
+              α0 ↦ Φ.org.eolang.bytes(
+                Δ ⤍ 01-
+              )
+            )
+          )
+        ⟧,
+        compares-two-different-types ↦ ⟦
+          φ ↦ Φ.org.eolang.int(
+            α0 ↦ Φ.org.eolang.bytes(
+              Δ ⤍ 00-00-00-00-00-00-00-44
+            )
+          ).eq(
+            α0 ↦ Φ.org.eolang.string(
+              α0 ↦ Φ.org.eolang.bytes(
+                Δ ⤍ 31-32-33-34-35-36-37-38
+              )
+            )
+          ).eq(
+            α0 ↦ Φ.org.eolang.bool(
+              α0 ↦ Φ.org.eolang.bytes(
+                Δ ⤍ 00-
+              )
+            )
+          )
+        ⟧,
+        calculates-fibonacci-number-with-recursion ↦ ⟦
+          fibo ↦ ⟦
+            n ↦ ∅,
+            φ ↦ ξ.n.lt(
+              α0 ↦ Φ.org.eolang.int(
+                α0 ↦ Φ.org.eolang.bytes(
+                  Δ ⤍ 00-00-00-00-00-00-00-03
+                )
+              )
+            ).if(
+              α0 ↦ Φ.org.eolang.int(
+                α0 ↦ Φ.org.eolang.bytes(
+                  Δ ⤍ 00-00-00-00-00-00-00-01
+                )
+              ),
+              α1 ↦ ξ.σ.fibo(
+                α0 ↦ ξ.n.minus(
+                  α0 ↦ Φ.org.eolang.int(
+                    α0 ↦ Φ.org.eolang.bytes(
+                      Δ ⤍ 00-00-00-00-00-00-00-01
+                    )
+                  )
+                )
+              ).plus(
+                α0 ↦ ξ.σ.fibo(
+                  α0 ↦ ξ.n.minus(
+                    α0 ↦ Φ.org.eolang.int(
+                      α0 ↦ Φ.org.eolang.bytes(
+                        Δ ⤍ 00-00-00-00-00-00-00-02
+                      )
+                    )
+                  )
+                )
+              )
+            )
+          ⟧,
+          φ ↦ ξ.fibo(
+            α0 ↦ Φ.org.eolang.int(
+              α0 ↦ Φ.org.eolang.bytes(
+                Δ ⤍ 00-00-00-00-00-00-00-04
+              )
+            )
+          ).eq(
+            α0 ↦ Φ.org.eolang.int(
+              α0 ↦ Φ.org.eolang.bytes(
+                Δ ⤍ 00-00-00-00-00-00-00-03
+              )
+            )
+          )
+        ⟧,
+        calculates-fibonacci-number-with-tail ↦ ⟦
+          φ ↦ ξ.fibonacci(
+            α0 ↦ Φ.org.eolang.int(
+              α0 ↦ Φ.org.eolang.bytes(
+                Δ ⤍ 00-00-00-00-00-00-00-04
+              )
+            )
+          ).eq(
+            α0 ↦ Φ.org.eolang.int(
+              α0 ↦ Φ.org.eolang.bytes(
+                Δ ⤍ 00-00-00-00-00-00-00-03
+              )
+            )
+          ),
+          fibonacci ↦ ⟦
+            n ↦ ∅,
+            φ ↦ ξ.n.lt(
+              α0 ↦ Φ.org.eolang.int(
+                α0 ↦ Φ.org.eolang.bytes(
+                  Δ ⤍ 00-00-00-00-00-00-00-03
+                )
+              )
+            ).if(
+              α0 ↦ ξ.small(
+                α0 ↦ ξ.n
+              ),
+              α1 ↦ ξ.rec(
+                α0 ↦ ξ.n,
+                α1 ↦ Φ.org.eolang.int(
+                  α0 ↦ Φ.org.eolang.bytes(
+                    Δ ⤍ 00-00-00-00-00-00-00-01
+                  )
+                ),
+                α2 ↦ Φ.org.eolang.int(
+                  α0 ↦ Φ.org.eolang.bytes(
+                    Δ ⤍ 00-00-00-00-00-00-00-01
+                  )
+                )
+              )
+            ),
+            small ↦ ⟦
+              n ↦ ∅,
+              φ ↦ ξ.n.eq(
+                α0 ↦ Φ.org.eolang.int(
+                  α0 ↦ Φ.org.eolang.bytes(
+                    Δ ⤍ 00-00-00-00-00-00-00-02
+                  )
+                )
+              ).if(
+                α0 ↦ Φ.org.eolang.int(
+                  α0 ↦ Φ.org.eolang.bytes(
+                    Δ ⤍ 00-00-00-00-00-00-00-01
+                  )
+                ),
+                α1 ↦ ξ.n
+              )
+            ⟧,
+            rec ↦ ⟦
+              n ↦ ∅,
+              minus1 ↦ ∅,
+              minus2 ↦ ∅,
+              φ ↦ ξ.n.eq(
+                α0 ↦ Φ.org.eolang.int(
+                  α0 ↦ Φ.org.eolang.bytes(
+                    Δ ⤍ 00-00-00-00-00-00-00-03
+                  )
+                )
+              ).if(
+                α0 ↦ ξ.minus1.plus(
+                  α0 ↦ ξ.minus2
+                ),
+                α1 ↦ ξ.σ.rec(
+                  α0 ↦ ξ.n.minus(
+                    α0 ↦ Φ.org.eolang.int(
+                      α0 ↦ Φ.org.eolang.bytes(
+                        Δ ⤍ 00-00-00-00-00-00-00-01
+                      )
+                    )
+                  ),
+                  α1 ↦ ξ.minus1.plus(
+                    α0 ↦ ξ.minus2
+                  ),
+                  α2 ↦ ξ.minus1
+                )
+              )
+            ⟧
+          ⟧
+        ⟧,
+        zero-division ↦ ⟦
+          φ ↦ Φ.org.eolang.try(
+            α0 ↦ ⟦
+              φ ↦ Φ.org.eolang.int(
+                α0 ↦ Φ.org.eolang.bytes(
+                  Δ ⤍ 00-00-00-00-00-00-00-02
+                )
+              ).div(
+                α0 ↦ Φ.org.eolang.int(
+                  α0 ↦ Φ.org.eolang.bytes(
+                    Δ ⤍ 00-00-00-00-00-00-00-00
+                  )
+                )
+              )
+            ⟧,
+            α1 ↦ ⟦
+              e ↦ ∅,
+              φ ↦ ξ.e
+            ⟧,
+            α2 ↦ Φ.org.eolang.nop
+          ).eq(
+            α0 ↦ Φ.org.eolang.string(
+              α0 ↦ Φ.org.eolang.bytes(
+                Δ ⤍ 43-61-6E-27-74-20-64-69-76-69-64-65-20-62-79-20-69-6E-74-65-67-65-72-20-7A-65-72-6F
+              )
+            )
+          )
+        ⟧,
+        division-by-one ↦ ⟦
+          dividend ↦ Φ.org.eolang.int(
+            α0 ↦ Φ.org.eolang.bytes(
+              Δ ⤍ FF-FF-FF-FF-FF-FF-FF-15
+            )
+          ),
+          φ ↦ ξ.dividend.div(
+            α0 ↦ Φ.org.eolang.int(
+              α0 ↦ Φ.org.eolang.bytes(
+                Δ ⤍ 00-00-00-00-00-00-00-01
+              )
+            )
+          ).eq(
+            α0 ↦ ξ.dividend
+          )
+        ⟧,
+        div-for-dividend-greater-than-zero ↦ ⟦
+          φ ↦ Φ.org.eolang.int(
+            α0 ↦ Φ.org.eolang.bytes(
+              Δ ⤍ 00-00-00-00-00-00-01-00
+            )
+          ).div(
+            α0 ↦ Φ.org.eolang.int(
+              α0 ↦ Φ.org.eolang.bytes(
+                Δ ⤍ 00-00-00-00-00-00-00-10
+              )
+            )
+          ).eq(
+            α0 ↦ Φ.org.eolang.int(
+              α0 ↦ Φ.org.eolang.bytes(
+                Δ ⤍ 00-00-00-00-00-00-00-10
+              )
+            )
+          )
+        ⟧,
+        div-with-remainder ↦ ⟦
+          φ ↦ Φ.org.eolang.int(
+            α0 ↦ Φ.org.eolang.bytes(
+              Δ ⤍ 00-00-00-00-00-00-00-0D
+            )
+          ).div(
+            α0 ↦ Φ.org.eolang.int(
+              α0 ↦ Φ.org.eolang.bytes(
+                Δ ⤍ FF-FF-FF-FF-FF-FF-FF-FB
+              )
+            )
+          ).eq(
+            α0 ↦ Φ.org.eolang.int(
+              α0 ↦ Φ.org.eolang.bytes(
+                Δ ⤍ FF-FF-FF-FF-FF-FF-FF-FE
+              )
+            )
+          )
+        ⟧,
+        div-less-than-one ↦ ⟦
+          φ ↦ Φ.org.eolang.int(
+            α0 ↦ Φ.org.eolang.bytes(
+              Δ ⤍ 00-00-00-00-00-00-00-01
+            )
+          ).div(
+            α0 ↦ Φ.org.eolang.int(
+              α0 ↦ Φ.org.eolang.bytes(
+                Δ ⤍ 00-00-00-00-00-00-00-05
+              )
+            )
+          ).eq(
+            α0 ↦ Φ.org.eolang.int(
+              α0 ↦ Φ.org.eolang.bytes(
+                Δ ⤍ 00-00-00-00-00-00-00-00
+              )
+            )
+          )
+        ⟧,
+        to-bytes-and-backwards ↦ ⟦
+          φ ↦ Φ.org.eolang.int(
+            α0 ↦ Φ.org.eolang.bytes(
+              Δ ⤍ 00-00-00-00-00-00-00-2A
+            )
+          ).as-bytes.as-int.eq(
+            α0 ↦ Φ.org.eolang.int(
+              α0 ↦ Φ.org.eolang.bytes(
+                Δ ⤍ 00-00-00-00-00-00-00-2A
+              )
+            )
+          )
+        ⟧,
+        as-bytes-equals-to-int ↦ ⟦
+          φ ↦ Φ.org.eolang.int(
+            α0 ↦ Φ.org.eolang.bytes(
+              Δ ⤍ 00-00-00-00-00-00-00-2A
+            )
+          ).eq(
+            α0 ↦ Φ.org.eolang.int(
+              α0 ↦ Φ.org.eolang.bytes(
+                Δ ⤍ 00-00-00-00-00-00-00-2A
+              )
+            ).as-bytes
+          )
+        ⟧,
+        as-bytes-equals-to-int-backwards ↦ ⟦
+          φ ↦ Φ.org.eolang.int(
+            α0 ↦ Φ.org.eolang.bytes(
+              Δ ⤍ 00-00-00-00-00-00-00-2A
+            )
+          ).as-bytes.eq(
+            α0 ↦ Φ.org.eolang.int(
+              α0 ↦ Φ.org.eolang.bytes(
+                Δ ⤍ 00-00-00-00-00-00-00-2A
+              )
+            )
+          )
+        ⟧,
+        multiply-by-zero ↦ ⟦
+          φ ↦ Φ.org.eolang.int(
+            α0 ↦ Φ.org.eolang.bytes(
+              Δ ⤍ 00-00-00-00-00-00-03-E8
+            )
+          ).times(
+            α0 ↦ Φ.org.eolang.int(
+              α0 ↦ Φ.org.eolang.bytes(
+                Δ ⤍ 00-00-00-00-00-00-00-00
+              )
+            )
+          ).eq(
+            α0 ↦ Φ.org.eolang.int(
+              α0 ↦ Φ.org.eolang.bytes(
+                Δ ⤍ 00-00-00-00-00-00-00-00
+              )
+            )
+          )
+        ⟧,
+        λ ⤍ Package
+      ⟧,
+      λ ⤍ Package
+    ⟧
+  ⟧
+}
