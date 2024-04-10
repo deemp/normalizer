@@ -82,7 +82,7 @@ jobs:
       #   run: ./scripts/pipeline.sh
 
       - name: Install mdsh
-        if: github.head_ref
+        if: runner.os == 'Linux' && github.head_ref
         uses: baptiste0928/cargo-install@v3.0.1
         with:
           crate: mdsh
@@ -90,11 +90,11 @@ jobs:
           tag: v0.8.0
 
       - name: Update Markdown files
-        if: github.head_ref
+        if: runner.os == 'Linux' && github.head_ref
         run: ./scripts/update-markdown.sh
 
       - name: Commit files
-        if: github.head_ref
+        if: runner.os == 'Linux' && github.head_ref
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.email "github-actions[bot]"
