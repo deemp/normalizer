@@ -74,7 +74,7 @@ jobs:
 
   pipeline:
     name: Run pipeline
-    needs: check
+    # needs: check
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
@@ -89,6 +89,8 @@ jobs:
         with:
           submodules: true
           ref: ${{ github.ref }}
+
+      - uses: mxschmitt/action-tmate@v3
 
       - name: 🧰 Setup Stack
         uses: freckle/stack-action@v5
