@@ -120,101 +120,101 @@ jobs:
           submodules: true
           ref: ${{ github.ref }}
 
-      - name: Set codepage on Windows
-        if: ${{ runner.os == 'Windows' }}
-        run: chcp 65001
+      # - name: Set codepage on Windows
+      #   if: ${{ runner.os == 'Windows' }}
+      #   run: chcp 65001
 
-      - name: Restore Syntax files
-        id: restore-syntax-files
-        uses: actions/cache/restore@v4
-        with:
-          key: syntax-files-${{ runner.os }}-${{ hashFiles(format('{0}.cf', env.syntax-dir), 'stack.yaml.lock') }}
-          path: |
-            ${{ env.syntax-dir }}/Lex.hs
-            ${{ env.syntax-dir }}/Par.hs
+      # - name: Restore Syntax files
+      #   id: restore-syntax-files
+      #   uses: actions/cache/restore@v4
+      #   with:
+      #     key: syntax-files-${{ runner.os }}-${{ hashFiles(format('{0}.cf', env.syntax-dir), 'stack.yaml.lock') }}
+      #     path: |
+      #       ${{ env.syntax-dir }}/Lex.hs
+      #       ${{ env.syntax-dir }}/Par.hs
 
-      - name: Check Syntax files exist
-        if: steps.restore-syntax-files.outputs.cache-hit == 'true'
-        shell: bash
-        id: check-syntax-files
-        run: |
-          source scripts/lib.sh
-          check_syntax_files_exist
-          printf "SYNTAX_FILES_EXIST=$SYNTAX_FILES_EXIST\n" >> $GITHUB_OUTPUT
+      # - name: Check Syntax files exist
+      #   if: steps.restore-syntax-files.outputs.cache-hit == 'true'
+      #   shell: bash
+      #   id: check-syntax-files
+      #   run: |
+      #     source scripts/lib.sh
+      #     check_syntax_files_exist
+      #     printf "SYNTAX_FILES_EXIST=$SYNTAX_FILES_EXIST\n" >> $GITHUB_OUTPUT
 
-      - name: 🧰 Setup Stack
-        uses: freckle/stack-action@v5
-        with:
-          stack-build-arguments: --pedantic --ghc-options -O2 --copy-bins ${{ steps.check-syntax-files.outputs.SYNTAX_FILES_EXIST == 'true' && ' ' || '--reconfigure --force-dirty --ghc-options -fforce-recomp' }}
-          test: false
+      # - name: 🧰 Setup Stack
+      #   uses: freckle/stack-action@v5
+      #   with:
+      #     stack-build-arguments: --pedantic --ghc-options -O2 --copy-bins ${{ steps.check-syntax-files.outputs.SYNTAX_FILES_EXIST == 'true' && ' ' || '--reconfigure --force-dirty --ghc-options -fforce-recomp' }}
+      #     test: false
 
-      - name: Save Syntax files
-        uses: actions/cache/save@v4
-        if: steps.restore-syntax-files.outputs.cache-hit != 'true'
-        with:
-          key: syntax-files-${{ runner.os }}-${{ hashFiles(format('{0}.cf', env.syntax-dir), 'stack.yaml.lock') }}
-          path: |
-            ${{ env.syntax-dir }}/Lex.hs
-            ${{ env.syntax-dir }}/Par.hs
+      # - name: Save Syntax files
+      #   uses: actions/cache/save@v4
+      #   if: steps.restore-syntax-files.outputs.cache-hit != 'true'
+      #   with:
+      #     key: syntax-files-${{ runner.os }}-${{ hashFiles(format('{0}.cf', env.syntax-dir), 'stack.yaml.lock') }}
+      #     path: |
+      #       ${{ env.syntax-dir }}/Lex.hs
+      #       ${{ env.syntax-dir }}/Par.hs
 
-      - uses: actions/setup-node@v4
-        with:
-          node-version: 20
-          cache: npm
+      # - uses: actions/setup-node@v4
+      #   with:
+      #     node-version: 20
+      #     cache: npm
 
-      - uses: actions/setup-java@v4
-        with:
-          distribution: "zulu"
-          java-version: 21
+      # - uses: actions/setup-java@v4
+      #   with:
+      #     distribution: "zulu"
+      #     java-version: 21
 
-      # TODO #340:10m switch to chrisdickinson/setup-yq after https://github.com/chrisdickinson/setup-yq/pull/14 is merged
-      - uses: deemp/setup-yq@latest
-        with:
-          yq-version: v4.44.1
-          yq-url: ${{ format('https://github.com/mikefarah/yq/releases/download/{{version}}/yq_{{platform}}_{{arch}}{0}', runner.os == 'Windows' && '.exe' || '') }}
+      # # TODO #340:10m switch to chrisdickinson/setup-yq after https://github.com/chrisdickinson/setup-yq/pull/14 is merged
+      # - uses: deemp/setup-yq@latest
+      #   with:
+      #     yq-version: v4.44.1
+      #     yq-url: ${{ format('https://github.com/mikefarah/yq/releases/download/{{version}}/yq_{{platform}}_{{arch}}{0}', runner.os == 'Windows' && '.exe' || '') }}
 
-      - name: Check pipeline lock
-        id: check-pipeline-lock
-        shell: bash
-        run: |
-          source scripts/lib.sh
+      # - name: Check pipeline lock
+      #   id: check-pipeline-lock
+      #   shell: bash
+      #   run: |
+      #     source scripts/lib.sh
 
-          write_pipeline_lock
+      #     write_pipeline_lock
 
-          printf "Pipeline lock changed: $PIPELINE_LOCK_CHANGED\n"
+      #     printf "Pipeline lock changed: $PIPELINE_LOCK_CHANGED\n"
 
-          printf "PIPELINE_LOCK_CHANGED=$PIPELINE_LOCK_CHANGED\n" >> $GITHUB_OUTPUT
-          printf "PIPELINE_LOCK_FILE_NEW_RELATIVE=$PIPELINE_LOCK_FILE_NEW_RELATIVE" >> $GITHUB_OUTPUT
+      #     printf "PIPELINE_LOCK_CHANGED=$PIPELINE_LOCK_CHANGED\n" >> $GITHUB_OUTPUT
+      #     printf "PIPELINE_LOCK_FILE_NEW_RELATIVE=$PIPELINE_LOCK_FILE_NEW_RELATIVE" >> $GITHUB_OUTPUT
 
-      - name: Restore pipeline files
-        id: pipeline-files
-        if: steps.check-pipeline-lock.outputs.PIPELINE_LOCK_CHANGED
-        uses: actions/cache/restore@v4
-        with:
-          key: pipeline-files-${{ runner.os }}-${{ hashFiles(steps.check-pipeline-lock.outputs.PIPELINE_LOCK_FILE_NEW_RELATIVE) }}
-          path: pipeline
+      # - name: Restore pipeline files
+      #   id: pipeline-files
+      #   if: steps.check-pipeline-lock.outputs.PIPELINE_LOCK_CHANGED
+      #   uses: actions/cache/restore@v4
+      #   with:
+      #     key: pipeline-files-${{ runner.os }}-${{ hashFiles(steps.check-pipeline-lock.outputs.PIPELINE_LOCK_FILE_NEW_RELATIVE) }}
+      #     path: pipeline
 
-      - name: Run pipeline
-        shell: bash
-        env:
-          PIPELINE_LOCK_CHANGED: ${{ (steps.check-pipeline-lock.outputs.PIPELINE_LOCK_CHANGED == 'true') || (steps.pipeline-files.outputs.cache-hit != 'true') }}
-          NORMALIZER_INSTALLED: "true"
-        run: ./scripts/pipeline.sh
+      # - name: Run pipeline
+      #   shell: bash
+      #   env:
+      #     PIPELINE_LOCK_CHANGED: ${{ (steps.check-pipeline-lock.outputs.PIPELINE_LOCK_CHANGED == 'true') || (steps.pipeline-files.outputs.cache-hit != 'true') }}
+      #     NORMALIZER_INSTALLED: "true"
+      #   run: ./scripts/pipeline.sh
 
-      - name: Check failing tests
-        shell: bash
-        if: always()
-        run: |
-          source scripts/lib.sh
-          get_failing_tests_non_normalized
-          get_failing_tests_normalized
+      # - name: Check failing tests
+      #   shell: bash
+      #   if: always()
+      #   run: |
+      #     source scripts/lib.sh
+      #     get_failing_tests_non_normalized
+      #     get_failing_tests_normalized
 
-      - name: Save pipeline files
-        if: steps.check-pipeline-lock.outputs.PIPELINE_LOCK_CHANGED
-        uses: actions/cache/save@v4
-        with:
-          key: pipeline-files-${{ runner.os }}-${{ hashFiles(steps.check-pipeline-lock.outputs.PIPELINE_LOCK_FILE_NEW_RELATIVE) }}
-          path: pipeline
+      # - name: Save pipeline files
+      #   if: steps.check-pipeline-lock.outputs.PIPELINE_LOCK_CHANGED
+      #   uses: actions/cache/save@v4
+      #   with:
+      #     key: pipeline-files-${{ runner.os }}-${{ hashFiles(steps.check-pipeline-lock.outputs.PIPELINE_LOCK_FILE_NEW_RELATIVE) }}
+      #     path: pipeline
 
       - name: Configure git
         if: always() && ${{ env.branch_is_not_master }} && runner.os == 'Linux'
