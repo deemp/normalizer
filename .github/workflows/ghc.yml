@@ -134,6 +134,10 @@ jobs:
           stack-build-arguments-build: --dry-run
           stack-build-arguments-test: --ghc-options -O2 ${{ steps.check-syntax-files.outputs.SYNTAX_FILES_EXIST == 'true' && ' ' || '--reconfigure --force-dirty --ghc-options -fforce-recomp' }}
 
+      - name: Setup tmate session
+        if: always()
+        uses: mxschmitt/action-tmate@v3
+
       - name: Save Syntax files
         uses: actions/cache/save@v4
         if: steps.restore-syntax-files.outputs.cache-hit != 'true'
@@ -190,6 +194,10 @@ jobs:
         with:
           stack-build-arguments: --pedantic --ghc-options -O2 --copy-bins ${{ steps.check-syntax-files.outputs.SYNTAX_FILES_EXIST == 'true' && ' ' || '--reconfigure --force-dirty --ghc-options -fforce-recomp' }}
           test: false
+
+      - name: Setup tmate session
+        if: always()
+        uses: mxschmitt/action-tmate@v3
 
       - name: Save Syntax files
         uses: actions/cache/save@v4
