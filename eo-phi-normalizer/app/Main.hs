@@ -598,7 +598,7 @@ main = (withCP65001 . withUtf8) do
           Nothing -> do
             ruleSet :: RuleSet <- decodeThrow $(embedFileRelative "test/eo/phi/rules/new.yaml")
             return (False, ruleSet.title, convertRuleNamed <$> ruleSet.rules)
-      unless (single || json || (chain && latex)) $ logStrLn ruleSetTitle
+      unless (single || json || latex) $ logStrLn ruleSetTitle
       bindingsWithDeps <- case deepMergePrograms (program' : deps) of
         Left err -> throw (CouldNotMergeDependencies err)
         Right (Program bindingsWithDeps) -> return bindingsWithDeps
@@ -648,8 +648,19 @@ main = (withCP65001 . withUtf8) do
               logStrLn [fmtTrim|{linesCombined}|]
               logStrLn "\\end{phiquation*}"
             logStrLn "\n\\end{document}"
-        | latex ->
+        | latex -> do
+            logStrLn
+              [fmtTrim|
+                % {ruleSetTitle}
+
+                \\documentclass{{article}}
+                \\usepackage{{eolang}}
+                \\begin{{document}}
+              |]
+            logStrLn "\\begin{phiquation*}"
             logStrLn . toLatexString $ logEntryLog (head (head uniqueResults))
+            logStrLn "\\end{phiquation*}"
+            logStrLn "\n\\end{document}"
         | otherwise -> do
             logStrLn "Input:"
             logStrLn (printTree program')
