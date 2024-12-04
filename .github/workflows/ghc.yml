@@ -104,10 +104,6 @@ jobs:
           submodules: true
           ref: ${{ github.ref }}
 
-      # - name: Set codepage on Windows
-      #   if: ${{ runner.os == 'Windows' }}
-      #   run: chcp 65001
-
       - name: Restore Syntax files
         id: restore-syntax-files
         uses: actions/cache/restore@v4
@@ -165,10 +161,6 @@ jobs:
         with:
           submodules: true
           ref: ${{ github.ref }}
-
-      # - name: Set codepage on Windows
-      #   if: ${{ runner.os == 'Windows' }}
-      #   run: chcp 65001
 
       - name: Restore Syntax files
         id: restore-syntax-files
