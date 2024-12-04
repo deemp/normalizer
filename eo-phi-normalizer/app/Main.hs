@@ -51,7 +51,7 @@
 
 module Main (main) where
 
-import Control.Exception (Exception (..), SomeException, catch, throw)
+import Control.Exception (Exception (..), SomeException, catch, throwIO)
 import Control.Lens.Lens ((&))
 import Control.Lens.Operators ((?~))
 import Control.Monad (forM, unless, when)
@@ -471,14 +471,14 @@ getFile = \case
   Just file' ->
     doesFileExist file' >>= \case
       True -> pure (Just file')
-      False -> throw $ FileDoesNotExist file'
+      False -> throwIO $ FileDoesNotExist file'
 
 getProgram :: Maybe FilePath -> IO Program
 getProgram inputFile = do
   inputFile' <- getFile inputFile
-  src <- maybe getContents' readFile inputFile' `catch` (throw . CouldNotRead . show @SomeException)
+  src <- maybe getContents' readFile inputFile' `catch` (throwIO . CouldNotRead . show @SomeException)
   case parseProgram src of
-    Left err -> throw $ CouldNotParse err
+    Left err -> throwIO $ CouldNotParse err
     Right program -> pure program
 
 getLoggers :: Maybe FilePath -> IO (String -> IO (), String -> IO ())
@@ -515,7 +515,7 @@ getMetrics' program bindingsPath = do
 getMetrics :: Maybe String -> Maybe FilePath -> IO ProgramMetrics
 getMetrics bindingsPath inputFile = do
   program <- getProgram inputFile
-  either throw pure (getMetrics' program bindingsPath)
+  either throwIO pure (getMetrics' program bindingsPath)
 
 injectLamdbaPackage :: [Binding] -> [Binding]
 injectLamdbaPackage bs
@@ -601,7 +601,7 @@ main = (withCP65001 . withUtf8) do
             return (False, ruleSet.title, convertRuleNamed <$> ruleSet.rules)
       unless (single || json || latex) $ logStrLn ruleSetTitle
       bindingsWithDeps <- case deepMergePrograms (program' : deps) of
-        Left err -> throw (CouldNotMergeDependencies err)
+        Left err -> throwIO (CouldNotMergeDependencies err)
         Right (Program bindingsWithDeps) -> return bindingsWithDeps
       let Program bindings = program'
           uniqueResults
@@ -630,7 +630,7 @@ main = (withCP65001 . withUtf8) do
             logStrLn "\\begin{phiquation*}"
             logStrLn [fmtTrim|{phiExpr}|]
             logStrLn "\\end{phiquation*}"
-      when (null uniqueResults || null (head uniqueResults)) (throw CouldNotNormalize)
+      when (null uniqueResults || null (head uniqueResults)) (throwIO CouldNotNormalize)
       if
         | single && json ->
             logStrLn
@@ -691,7 +691,7 @@ main = (withCP65001 . withUtf8) do
       program' <- getProgram inputFile
       deps <- mapM (getProgram . Just) dependencies
       bindingsWithDeps <- case deepMergePrograms (program' : deps) of
-        Left err -> throw (CouldNotMergeDependencies err)
+        Left err -> throwIO (CouldNotMergeDependencies err)
         Right (Program bindingsWithDeps) -> return bindingsWithDeps
       (builtin, _ruleSetTitle, rules) <-
         case rulesPath of
